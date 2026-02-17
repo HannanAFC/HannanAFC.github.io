@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+    --color-text-light: #11090a;
+    --color-background-light: #e6e6e6;
+    --color-primary-light: #b14e59;
+    --color-primary-light-20: #b14e5933;
+    --color-secondary-light: #dba4ad;
+    --color-secondary-light-20: #dba4ad33;
+    --color-accent-light: #cb727c;
+    --color-text-dark: #f6eeef;
+    --color-background-dark: #1a1a1a;
+    --color-primary-dark: #b14e59;
+    --color-primary-dark-20: #b14e5933;
+    --color-secondary-dark: #5b242d;
+    --color-secondary-dark-20: #5b242d33;
+    --color-accent-dark: #8d343f;
+
+    --var-shadow-color: 0deg 0% 56%;
+    --shadow-elevation-low:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color) / 0.34),
+        0.4px 0.8px 1px -1.2px hsl(var(--var-shadow-color) / 0.34),
+        1px 2px 2.5px -2.5px hsl(var(--var-shadow-color) / 0.34);
+    --shadow-elevation-medium:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color) / 0.36),
+        0.8px 1.6px 2px -0.8px hsl(var(--var-shadow-color) / 0.36),
+        2.1px 4.1px 5.2px -1.7px hsl(var(--var-shadow-color) / 0.36),
+        5px 10px 12.6px -2.5px hsl(var(--var-shadow-color) / 0.36);
+    --shadow-elevation-high:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color) / 0.34),
+        1.5px 2.9px 3.7px -0.4px hsl(var(--var-shadow-color) / 0.34),
+        2.7px 5.4px 6.8px -0.7px hsl(var(--var-shadow-color) / 0.34),
+        4.5px 8.9px 11.2px -1.1px hsl(var(--var-shadow-color) / 0.34),
+        7.1px 14.3px 18px -1.4px hsl(var(--var-shadow-color) / 0.34),
+        11.2px 22.3px 28.1px -1.8px hsl(var(--var-shadow-color) / 0.34),
+        17px 33.9px 42.7px -2.1px hsl(var(--var-shadow-color) / 0.34),
+        25px 50px 62.9px -2.5px hsl(var(--var-shadow-color) / 0.34);
+
+    --var-shadow-color-dark: 0deg 0% 2%;
+    --shadow-elevation-low-dark:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color-dark) / 0.34),
+        0.4px 0.8px 1px -1.2px hsl(var(--var-shadow-color-dark) / 0.34),
+        1px 2px 2.5px -2.5px hsl(var(--var-shadow-color-dark) / 0.34);
+    --shadow-elevation-medium-dark:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color-dark) / 0.36),
+        0.8px 1.6px 2px -0.8px hsl(var(--var-shadow-color-dark) / 0.36),
+        2.1px 4.1px 5.2px -1.7px hsl(var(--var-shadow-color-dark) / 0.36),
+        5px 10px 12.6px -2.5px hsl(var(--var-shadow-color-dark) / 0.36);
+    --shadow-elevation-high-dark:
+        0.3px 0.5px 0.7px hsl(var(--var-shadow-color-dark) / 0.34),
+        1.5px 2.9px 3.7px -0.4px hsl(var(--var-shadow-color-dark) / 0.34),
+        2.7px 5.4px 6.8px -0.7px hsl(var(--var-shadow-color-dark) / 0.34),
+        4.5px 8.9px 11.2px -1.1px hsl(var(--var-shadow-color-dark) / 0.34),
+        7.1px 14.3px 18px -1.4px hsl(var(--var-shadow-color-dark) / 0.34),
+        11.2px 22.3px 28.1px -1.8px hsl(var(--var-shadow-color-dark) / 0.34),
+        17px 33.9px 42.7px -2.1px hsl(var(--var-shadow-color-dark) / 0.34),
+        25px 50px 62.9px -2.5px hsl(var(--var-shadow-color-dark) / 0.34);
+
+    --var-secondary-inset-color: 350deg 28% 41%;
+    --shadow-inset-secondary:
+        0.3px 0.5px 0.7px hsl(var(--var-secondary-inset-color) / 0.29) inset,
+        0.7px 1.5px 1.9px -0.5px hsl(var(--var-secondary-inset-color) / 0.31) inset,
+        1.4px 2.9px 3.8px -1.1px hsl(var(--var-secondary-inset-color) / 0.33) inset,
+        2.8px 5.7px 7.5px -1.6px hsl(var(--var-secondary-inset-color) / 0.35) inset,
+        5.4px 10.8px 14.2px -2.1px hsl(var(--var-secondary-inset-color) / 0.36) inset;
+
+    --var-secondary-inset-color-dark: 352deg 61% 10%;
+    --shadow-inset-secondary-dark:
+        0.3px 0.5px 0.7px hsl(var(--var-secondary-inset-color-dark) / 0.29) inset,
+        0.7px 1.5px 1.9px -0.5px hsl(var(--var-secondary-inset-color-dark) / 0.31) inset,
+        1.4px 2.9px 3.8px -1.1px hsl(var(--var-secondary-inset-color-dark) / 0.33) inset,
+        2.8px 5.7px 7.5px -1.6px hsl(var(--var-secondary-inset-color-dark) / 0.35) inset,
+        5.4px 10.8px 14.2px -2.1px hsl(var(--var-secondary-inset-color-dark) / 0.36) inset;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.timer-type-active
+{
+    background: linear-gradient(90deg, var(--color-primary-light), var(--color-secondary-light) 100%);
+}
+
+.dark .timer-type-active
+{
+    background: linear-gradient(90deg, var(--color-primary-dark), var(--color-secondary-dark) 100%);
+}
