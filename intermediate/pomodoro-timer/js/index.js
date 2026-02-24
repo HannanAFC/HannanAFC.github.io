@@ -131,11 +131,13 @@ function initPomodoroTimer( )
                 index ++;
                 if ( index + 1 >= timerSequence.length )
                 {
+                    currentSequenceIndex = 0;
                     currentCycle ++;
                     switchTimerType( timerSequence[ 0 ] );
                 }
                 else
                 {
+                    currentSequenceIndex ++;
                     switchTimerType( timerSequence[ index ] );
                 }
             }
@@ -242,12 +244,14 @@ function initPomodoroTimer( )
         var index = timerSequence.indexOf( currentMode, currentSequenceIndex );
         if ( index + 1 >= timerSequence.length )
         {
+            currentSequenceIndex = 0;
             currentCycle ++;
             switchTimerType( timerSequence[ 0 ] );
         }
         else
         {
-            switchTimerType( modeList[ index + 1 ] );
+            currentSequenceIndex ++;
+            switchTimerType( timerSequence[ index + 1 ] );
         }
     }
 
@@ -397,7 +401,6 @@ function initPomodoroTasks( )
     function editTask( taskDetails, uuid )
     {
         findTaskIndexByUUID( uuid );
-        console.log( taskIndex );
 
         if ( taskIndex )
         {
